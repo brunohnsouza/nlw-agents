@@ -17,10 +17,15 @@ server.register(fastifyCors, {
 server.setSerializerCompiler(serializerCompiler)
 server.setValidatorCompiler(validatorCompiler)
 
+// Helth check
+server.get('/health', async () => {
+    return { status: 'ok' }
+})
+
 // Routes
 server.register(getRoomsRoute)
 
 server.listen({ port: env.PORT }).then(() => {
     // biome-ignore lint/suspicious/noConsole: needed for server startup log
-    console.log(`Server is running on http://localhost:${env.PORT}`)
+    console.log(`Server is running on port ${env.PORT}`)
 })
