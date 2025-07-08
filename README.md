@@ -1,0 +1,1 @@
+App completo voltado para livestreming onde a audiência envia perguntas e um agente de IA fica responsável por prevê e sugeri respostas em tempo real com base na transcrição da livestreaming
