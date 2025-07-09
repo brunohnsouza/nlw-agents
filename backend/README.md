@@ -39,7 +39,7 @@ O projeto segue uma arquitetura modular com:
 ### 1. Clone o repositório
 ```bash
 git clone <url-do-repositorio>
-cd server
+cd backend
 ```
 
 ### 2. Configure o banco de dados
@@ -63,7 +63,7 @@ npm install
 
 ### 5. Execute as migrações do banco
 ```bash
-npx drizzle-kit migrate
+npm run db:migrate
 ```
 
 ### 6. (Opcional) Popule o banco com dados de exemplo
@@ -88,6 +88,8 @@ npm start
 - `npm run dev` - Executa o servidor em modo de desenvolvimento com hot reload
 - `npm start` - Executa o servidor em modo de produção
 - `npm run db:seed` - Popula o banco de dados com dados de exemplo
+- `npm run db:generate` - Gera os arquivos de migração do Drizzle ORM
+- `npm run db:migrate` - Executa as migrações pendentes do banco de dados
 
 ## Endpoints
 
@@ -95,3 +97,6 @@ A API estará disponível em `http://localhost:3333`
 
 - `GET /health` - Health check da aplicação
 - `GET /rooms` - Lista as salas disponíveis
+- `POST /rooms` - Cria uma nova sala
+- `GET /rooms/:roomId/questions` - Lista as perguntas de uma sala específica
+- `POST /rooms/:roomId/questions` - Cria uma nova pergunta em uma sala específica
