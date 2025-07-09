@@ -7,6 +7,9 @@ import {
 } from 'fastify-type-provider-zod'
 import { env } from './env.ts'
 import { getRoomsRoute } from './http/routes/get-rooms.ts'
+import { createRoomRoute } from './http/routes/create-room.ts'
+import { getRoomQuestionsRoute } from './http/routes/get-room-questions.ts'
+import { createQuestionRoute } from './http/routes/create-question.ts'
 
 const server = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -24,6 +27,9 @@ server.get('/health', async () => {
 
 // Routes
 server.register(getRoomsRoute)
+server.register(createRoomRoute)
+server.register(getRoomQuestionsRoute)
+server.register(createQuestionRoute)
 
 server.listen({ port: env.PORT }).then(() => {
     // biome-ignore lint/suspicious/noConsole: needed for server startup log
