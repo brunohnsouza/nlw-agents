@@ -1,6 +1,6 @@
 # NLW Agents - Backend
 
-Uma API robusta e inteligente que transcreve em tempo real o áudio de uma livestream usando IA, armazena os conteúdos em um banco de dados e permite responder perguntas com base no que já foi dito durante a transmissão.
+Uma API robusta e inteligente construída durante um evento da [Rocketseat](https://www.rocketseat.com.br/) que transcreve em tempo real o áudio de uma livestream usando IA, armazena os conteúdos em um banco de dados e permite responder perguntas com base no que já foi dito durante a transmissão.
 
 ## Índice
 
@@ -100,3 +100,4 @@ A API estará disponível em `http://localhost:3333`
 - `POST /rooms` - Cria uma nova sala
 - `GET /rooms/:roomId/questions` - Lista as perguntas de uma sala específica
 - `POST /rooms/:roomId/questions` - Cria uma nova pergunta em uma sala específica
+- `POST /rooms/:roomId/audio` - Envia um áudio para transcrição e armazenamento

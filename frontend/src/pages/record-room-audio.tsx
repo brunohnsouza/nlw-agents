@@ -35,13 +35,10 @@ export function RecordRoomAudio() {
 
         formData.append('file', audio, 'audio.webm');
 
-        const response = await fetch(`http://localhost:3333/rooms/${params.roomId}/audio`, {
+        await fetch(`http://localhost:3333/rooms/${params.roomId}/audio`, {
             method: 'POST',
             body: formData,
         });
-
-        const result = await response.json();
-        console.log('Áudio enviado com sucesso:', result);
     }
 
     function createRecorder(audio: MediaStream) {

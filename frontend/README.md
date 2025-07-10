@@ -4,10 +4,31 @@ Aplicação web desenvolvida durante um evento da [Rocketseat](https://www.rocke
 
 ## Índice
 
+- [Páginas](#paginas)
 - [Tecnologias](#tecnologias)
 - [Padrões de Projeto](#padroes)
 - [Setup e Configuração](#setupeconfiguracao)
 - [Estrutura do Projeto](#estrutura)
+
+## Páginas
+
+### Inicial
+
+Página inicial com lista de salas e criação de novas salas.
+
+![Home](.github/home.png) 
+
+### Sala
+
+Página da sala com formulário para perguntas, lista de perguntas e respostas.
+
+![Room](.github/room.png) 
+
+### Gravações
+
+Página de gravações de áudio, onde o usuário pode iniciar e parar a gravação.
+
+![Record](.github/record-audio.png) 
 
 ## Tecnologias
 
@@ -66,8 +87,9 @@ O projeto consome uma API que deve estar rodando na porta 3333. Certifique-se de
 
 ```
 src/
-├── components/ui/    # Componentes de interface
+├── components/ui/   # Componentes de interface
 ├── pages/           # Páginas da aplicação
 ├── lib/             # Utilitários e configurações
+├── http/            # Cliente HTTP para comunicação com a API
 └── app.tsx          # Componente raiz
 ``` 
